@@ -1,0 +1,15 @@
+name = "TrixiNonEq"
+uuid = "afeecb1c-47ee-4093-8471-b58f83b8e74b"
+authors = ["Georgii Oblapenko <oblapenko@acom.rwth-aachen.de>"]
+version = "0.0.1"
+
+[deps]
+BenchmarkTools = "6e4b80f9-dd63-53aa-95a3-0cdb28fa8baf"
+CSV = "336ed68f-0bac-5ca0-87d4-7b16caf5d00b"
+DataFrames = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
+LinearAlgebra = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
+MuladdMacro = "46d2c3a1-f734-5fdb-9937-b9b9aeba4221"
+OrdinaryDiffEq = "1dea7af3-3e70-54e6-95c3-0bf5283fa5ed"
+StaticArrays = "90137ffa-7385-5640-81b9-e52037218182"
+Trixi = "a7f1ee26-1774-49b1-8366-f1abc58fbfcb"
+Trixi2Vtk = "bc1476a1-1ca6-4cc3-950b-c312b255ff95"

@@ -1,7 +1,7 @@
 name = "TrixiChem"
 uuid = "afeecb1c-47ee-4093-8471-b58f83b8e74b"
 authors = ["Georgii Oblapenko <oblapenko@acom.rwth-aachen.de>", "Arseniy Tarnovskiy <Arseniy.Tarnovskiy@rwth-aachen.de>"]
-version = "0.0.1"
+version = "0.1.0"
 
 [deps]
 BenchmarkTools = "6e4b80f9-dd63-53aa-95a3-0cdb28fa8baf"

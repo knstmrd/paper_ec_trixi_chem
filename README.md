@@ -1,5 +1,11 @@
 # Multi-species reacting flow simulations with Trixi
-This repository contains code for the multi-species chemically non-equilibrium reacting Euler equations, based on Trixi.jl.
+This repository contains code for the multi-species chemically non-equilibrium reacting Euler equations with *arbitrary* internal energy functions
+of the constituent species, based on [Trixi.jl](https://github.com/trixi-framework/Trixi.jl). This is an extension of the
+single-species case (see [Oblapenko, Torrilhon 2024](https://arxiv.org/abs/2403.16882) for the derivation of the fluxes in the single-species case
+as well as the [associated reproducibility repo](https://github.com/knstmrd/paper-ec_trixi_inte)).
+
+Thermal equilibrium is assumed (i.e. all the internal modes of all species have a single temperature T).
+
 The code might run quite slow, as multiple quantities such as temperature are computed multiple times for the same timestep; other things are not super-optimized as well.
 
 ## Usage
@@ -48,7 +54,7 @@ equations = CompressibleEulerEquationsMs1T2D([mass_mol, mass_atom], [e_int_mol, 
 ```
 Here one needs to pass in a list of molecular masses of the species (units of kg), specific energy functions (units of J/kg), specific heats (units of J/K/kg),
 a reference mass (units of kg), temperature (units of K), energy (units of J), a tolerance for the Newton solver for temperature, a parameter governing the switch
-from evaluation of jump in energy to a midpoint evaluation of specific heat (for numerical stability; more details in [single-species preprint](https://arxiv.org/abs/2403.16882)),
+from evaluation of jump in energy to a midpoint evaluation of specific heat (for numerical stability; more details in the [single-species preprint](https://arxiv.org/abs/2403.16882)),
 the minimum and maximum temperatures for the tabulation (in K), and a temperature step size for the tabulation (in K).
 
 **Note** The user is to take care of correct and consistent scaling themselves!

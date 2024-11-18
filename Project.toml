@@ -1,6 +1,6 @@
-name = "TrixiNonEq"
+name = "TrixiChem"
 uuid = "afeecb1c-47ee-4093-8471-b58f83b8e74b"
-authors = ["Georgii Oblapenko <oblapenko@acom.rwth-aachen.de>"]
+authors = ["Georgii Oblapenko <oblapenko@acom.rwth-aachen.de>", "Arseniy Tarnovskiy <Arseniy.Tarnovskiy@rwth-aachen.de>"]
 version = "0.0.1"
 
 [deps]

@@ -78,7 +78,7 @@ It uses a [P4Est grid](https://p4est.org/) with AMR based on a [shock indicator]
 Two command-line parameters need to be supplied: the polynomial degree and the CFL number (CFL of 0.4 seems to work well with up to polynomial orders of 4, higher CFL values may lead to crashes).
 The simulation is started on a uniform curved 30x30 grid, the mapping of a square onto this grid is defined by the `mapping_full` function.
 The function takes 3 points that defined the the curve of the inflow boundary: `[p1, p2, p3]` is the input list, and the corresponding
-points are taken to be `[(-p1, 0), (-p2, p2), (p3, 0)]`.
+points are taken to be `[(-p1, 0), (-p2, p2), (0, p3)]`.
 
 ## Citing
 For now, the [single-species preprint](https://arxiv.org/abs/2403.16882) can be cited, the multi-species preprint will be made available later:

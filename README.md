@@ -79,3 +79,15 @@ Two command-line parameters need to be supplied: the polynomial degree and the C
 The simulation is started on a uniform curved 30x30 grid, the mapping of a square onto this grid is defined by the `mapping_full` function.
 The function takes 3 points that defined the the curve of the inflow boundary: `[p1, p2, p3]` is the input list, and the corresponding
 points are taken to be `[(-p1, 0), (-p2, p2), (p3, 0)]`.
+
+## Citing
+For now, the [single-species preprint](https://arxiv.org/abs/2403.16882) can be cited, the multi-species preprint will be made available later:
+
+```bibtex
+@article{oblapenko2024entropy,
+  title={Entropy-conservative high-order methods for high-enthalpy gas flows},
+  author={Oblapenko, Georgii and Torrilhon, Manuel},
+  journal={arXiv preprint arXiv:2403.16882},
+  year={2024}
+}
+```

@@ -81,8 +81,28 @@ The function takes 3 points that defined the the curve of the inflow boundary: `
 points are taken to be `[(-p1, 0), (-p2, p2), (0, p3)]`.
 
 ## Citing
-For now, the [single-species preprint](https://arxiv.org/abs/2403.16882) can be cited, the multi-species preprint will be made available later:
+The [associated preprint](https://arxiv.org/abs/2411.13168) can be cited as:
+```bibtex
+@article{oblapenko2024entropychem,
+  title={Entropy-stable fluxes for high-order {D}iscontinuous {G}alerkin simulations of high-enthalpy flows},
+  author={Oblapenko, Georgii and Tarnovskiy, Arseniy and Ertl, Moritz and Torrilhon, Manuel},
+  journal={arXiv preprint arXiv:2411.13168},
+  year={2024}
+}
+```
 
+This repository can be cited as:
+```bibtex
+@misc{oblapenko2024entropystableRepro,
+  title={Reproducibility repository for "Entropy-stable fluxes for high-order {D}iscontinuous {G}alerkin simulations of high-enthalpy flows"},
+  author={Oblapenko, Georgii and Tarnovskiy, Arseniy},
+  year={2024},
+  howpublished={\url{https://github.com/knstmrd/paper-ec_trixi_chem}},
+  doi={10.5281/zenodo.13981615}
+}
+```
+
+The [single-species preprint](https://arxiv.org/abs/2403.16882) can be also cited:
 ```bibtex
 @article{oblapenko2024entropy,
   title={Entropy-conservative high-order methods for high-enthalpy gas flows},

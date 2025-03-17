@@ -535,8 +535,8 @@ using LinearAlgebra
 
         # this is done just in case at some point some rho < 0.0 and then some logarithm stuff produces a NaN
         # but if we take (abs(rho)) then we might avoid a full breakdown of the simulation and get to a physically meaningful result
-        rhos_ll = abs.(rhos_ll)
-        rhos_rr = abs.(rhos_rr)
+        # rhos_ll = abs.(rhos_ll)
+        # rhos_rr = abs.(rhos_rr)
 
         v1_avg = 0.5*(v1_ll + v1_rr)
         v2_avg = 0.5*(v2_ll + v2_rr)
@@ -548,11 +548,11 @@ using LinearAlgebra
 
         tmp_sum = 0.0
         for i in eachcomponent(equations)
-            tmp_sum+=0.5*((rhos_ll[i]+rhos_rr[i])/equations.mass[i])
+            tmp_sum+=0.5*((abs(rhos_ll[i])+abs(rhos_rr[i]))/equations.mass[i])
         end
 
         if(orientation == 1)
-            fx_rhos = SVector{ncomponents(equations), Float64}(Trixi.ln_mean(rhos_ll[i], rhos_rr[i]) * v1_avg
+            fx_rhos = SVector{ncomponents(equations), Float64}(Trixi.ln_mean(abs(rhos_ll[i]), abs(rhos_rr[i])) * v1_avg
                                                                for i in eachcomponent(equations))  #use ln_mean function in math.jl
             fx_rhos_sum = sum(fx_rhos)                                      
             fx_rho_v1 = v1_avg * fx_rhos_sum  + tmp_sum / inv_T_avg
@@ -579,7 +579,7 @@ using LinearAlgebra
                 end
             end
         else
-            fx_rhos = SVector{ncomponents(equations), Float64}(Trixi.ln_mean(rhos_ll[i], rhos_rr[i]) * v2_avg
+            fx_rhos = SVector{ncomponents(equations), Float64}(Trixi.ln_mean(abs(rhos_ll[i]), abs(rhos_rr[i])) * v2_avg
                                                                 for i in eachcomponent(equations))
             fx_rhos_sum = sum(fx_rhos)                                      
             fx_rho_v2 = v2_avg * fx_rhos_sum  + tmp_sum / inv_T_avg

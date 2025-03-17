@@ -623,11 +623,12 @@ using LinearAlgebra
         #   0   t_1  t_2  0;
         #   0    0    0   1 ]
         # where t_1 = -n_2 and t_2 = n_1
-    
+        densities = @view u[4:end]
+
         return SVector(c * u[1] + s * u[2],
                        -s * u[1] + c * u[2],
                        u[3],
-                       u[4:end]...)
+                       densities...)
     end
     
     # Called inside `FluxRotated` in `numerical_fluxes.jl` so the direction
@@ -637,10 +638,11 @@ using LinearAlgebra
         c = normal_vector[1]
         s = normal_vector[2]
     
+        densities = @view u[4:end]
         return SVector(c * u[1] - s * u[2],
                        s * u[1] + c * u[2],
                        u[3],
-                       u[4:end]...)
+                       densities...)
     end
 
 

@@ -230,11 +230,11 @@ const boundary_conditions = Dict(:x_neg => boundary_condition_supersonic_inflow,
                                  :x_pos => TrixiChem.boundary_condition_slip_wall)
 
 
-const Trixi.mapping_full = mapping_full
+mapping_full = mapping_full
 const polydeg = parse(Int32, ARGS[1])
 const cfl = parse(Float64, ARGS[2])
 
-mymapping = (xi, eta) -> Trixi.mapping_full(xi, eta, 1.0, [1.32, 1.05, 2.25])
+const mymapping = (xi, eta) -> mapping_full(xi, eta, 1.0, [1.32, 1.05, 2.25])
 
 const surface_flux = FluxLaxFriedrichs(max_abs_speed_naive_new) 
 const volume_flux  = FluxRotated(flux_oblapenko)
